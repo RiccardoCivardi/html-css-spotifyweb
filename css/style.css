@@ -11,6 +11,9 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+
+  /* debug */
+  color: white;
 }
 
 ul {
@@ -37,9 +40,7 @@ ul {
 /* Layout */
 
 .main-container {
-  width: 100%;
-  position: fixed;
-  top: 0;
+  height: calc(100vh - 90px);
 }
 
 .container {
@@ -73,12 +74,18 @@ aside {
   width: 230px;
   height: calc(100vh - 90px);
   background-color: #000000;
-  
-
-  /* debug */
-  color: white;
 }
 
+/**** HEADER ****/
+
+header {
+  width: calc(100vw - 230px);
+  height: 90px;
+  position:fixed;
+  top: 0;
+  right:0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 /**** MAIN ****/
 
@@ -88,19 +95,6 @@ main {
   background-color: #141922;
   padding-top: 90px;
   overflow: auto;
-
-  /* debug */
-  color: white;
-}
-
-/* Banner */
-
-.banner {
-  width: 100%;
-  height: 90px;
-  position:fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* menu */
@@ -119,8 +113,6 @@ main {
 footer {
   width: 100%;
   height: 90px;
-  position: fixed;
-  bottom: 0;
   background-color: #282828;
   
   /* debug */
