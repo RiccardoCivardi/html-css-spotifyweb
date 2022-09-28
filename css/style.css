@@ -1,6 +1,16 @@
 /***** GENERAL STYLES *****/
 /**** Desktop first *****/
 
+
+:root {
+  --width-aside-dt: 230px;
+  --width-aside-mb: 60px;
+  --width-dt: calc(100vw - var(--width-aside-dt));
+  --width-mb: calc(100vw - var(--width-aside-mb));
+  --height-header: 90px;
+  --height-footer: var(--height-header);
+}
+
 *,
 *::before,
 *::after {
@@ -11,6 +21,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;     
 
   /* debug */
   color: white;
@@ -37,11 +48,21 @@ ul {
   justify-content: center;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
 /* Layout */
 
 .main-container {
-  height: calc(100vh - 90px);
-}
+  height: calc(100vh - var(--height-footer));
+} 
+
+
 
 .container {
   margin-left: 20px;
@@ -68,32 +89,37 @@ ul {
 
 /***** MAIN STYLES *****/
 
-/**** ASIDE ****/
-
-aside {
-  width: 230px;
-  height: calc(100vh - 90px);
-  background-color: #000000;
-}
+  
 
 /**** HEADER ****/
 
 header {
-  width: calc(100vw - 230px);
-  height: 90px;
+  width: var(--width-dt);
+  height: var(--height-header);
   position:fixed;
   top: 0;
   right:0;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/**** ASIDE ****/
+
+aside {
+  width: var(--width-aside-dt);
+  background-color: #000000;
+}
+
+.aside-mb {
+  display: none;
+}
+
+
 /**** MAIN ****/
 
 main {
-  width: calc(100vw - 230px);
-  height: calc(100vh - 90px);
+  width: var(--width-dt);
   background-color: #141922;
-  padding-top: 90px;
+  padding-top: var(--height-header);
   overflow: auto;
 }
 
@@ -111,13 +137,29 @@ main {
 /**** FOOTER ****/
 
 footer {
-  width: 100%;
-  height: 90px;
+  height: var(--height-footer);
   background-color: #282828;
   
   /* debug */
   color: white;
 }
+
+.side-footer {
+  width: 230px;
+
+  /* debug */
+  background-color: green;
+  height: 30px;
+}
+
+.play-bar {
+  width: 40%;
+  /* debug */
+  background-color: rgba(234, 71, 26, 0.2);
+  height: 30px;
+}
+
+
 
 /***** MEDIA QUERY *****/
 
@@ -149,20 +191,42 @@ footer {
     width: 50%;
   }
 
+  /**** FOOTER ****/
+
+  .side-footer {
+    width: 30%; 
+  }
+
+
 }
 
 @media screen and (max-width: 599px) {
   
+  /**** HEADER ****/
+
+  header {
+    width: var(--width-mb);
+  }
+
+
   /**** ASIDE ****/
 
   aside {
     width: 60px;
   }
 
+  .aside-dt {
+    display: none;
+  }
+
+  .aside-mb {
+    display: block;
+  }
+
 
   /**** MAIN ****/
 
   main {
-    width: calc(100vw - 60px);
+    width: var(--width-mb);
   }
 }
