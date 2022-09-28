@@ -1,4 +1,5 @@
 /***** GENERAL STYLES *****/
+/**** Desktop first *****/
 
 *,
 *::before,
@@ -6,4 +7,170 @@
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/***** UTILITIES *****/
+
+/* Flex */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* Layout */
+
+.main-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.container {
+  margin-left: 20px;
+  margin-right: 45px;
+
+  /* debug */
+  background-color: chartreuse;
+}
+
+.card {
+  width: calc(100% / 6);
+  padding: 0 0.5rem;
+
+  /* debug */
+  background-color: rgb(8, 0, 255);
+  border: 1px solid red;
+  height: 200px;
+}
+
+
+
+
+
+
+/***** MAIN STYLES *****/
+
+/**** ASIDE ****/
+
+aside {
+  width: 230px;
+  height: calc(100vh - 90px);
+  background-color: #000000;
+  
+
+  /* debug */
+  color: white;
+}
+
+
+/**** MAIN ****/
+
+main {
+  width: calc(100vw - 230px);
+  height: calc(100vh - 90px);
+  background-color: #141922;
+  padding-top: 90px;
+  overflow: auto;
+
+  /* debug */
+  color: white;
+}
+
+/* Banner */
+
+.banner {
+  width: 100%;
+  height: 90px;
+  position:fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* menu */
+
+/* Recents section */
+
+.inner-card {
+  /* debug */
+  background-color: deeppink;
+  height: 100%;
+}
+
+
+/**** FOOTER ****/
+
+footer {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+  background-color: #282828;
+  
+  /* debug */
+  color: white;
+}
+
+/***** MEDIA QUERY *****/
+
+/**** TABLET *****/
+
+@media screen and (max-width: 990px) {
+
+  /***** UTILITIES *****/
+  
+  /* Layout */
+
+  .card-25 {
+    width: 25%;
+  }
+
+}
+
+
+
+/**** SMARTHPHONE *****/
+
+@media screen and (max-width: 767px) {
+
+  /***** UTILITIES *****/
+  
+  /* Layout */
+
+  .card-50 {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 599px) {
+  
+  /**** ASIDE ****/
+
+  aside {
+    width: 60px;
+  }
+
+
+  /**** MAIN ****/
+
+  main {
+    width: calc(100vw - 60px);
+  }
 }
