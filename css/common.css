@@ -56,7 +56,6 @@ ul {
 }
 
 
-
 /***** UTILITIES *****/
 
 /* Flex */
@@ -110,12 +109,6 @@ ul {
   text-align: center;
   margin-bottom: 5px;
   cursor: pointer;
-}
-
-/* text */
-
-.font-plus {
-  font-size: 0.9rem;
 }
 
 /* active */

@@ -62,9 +62,12 @@
     padding: 5px 0;
   }
 
+  .aside-menu .aside-active {
+    display: none;
+  }
+
   .aside-menu svg {
     display: block;
-    margin: 0 auto;
   }
 
   .aside-menu ul:first-child span {
