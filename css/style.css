@@ -41,8 +41,7 @@ aside {
 
 aside li,
 .logo,
-.aside-bottom .install,
-.aside-bottom > div:last-child {
+.aside-bottom .install {
   cursor: pointer;
 }
 
@@ -261,32 +260,181 @@ section .row {
 
 /**** FOOTER ****/
 
-footer {
-  width: 100%;
-  height: var(--height-footer);
-  position: fixed;
-  bottom: 0;
-  background-color: #282828;
+/* Footer general */
 
-  
-  /* debug */
-  color: white;
+footer {
+  height: var(--height-footer);
+  background-color: var(--bg-footer);
+}
+
+footer span {
+  font-size: 0.7rem;
+}
+
+footer i {
+  cursor: pointer;
 }
 
 .side-footer {
   width: 230px;
-
-  /* debug */
-  background-color: green;
-  height: 30px;
 }
+
+.side-footer i {
+  font-size: 0.9rem;
+}
+
+/* .progress (avanzamento) general  */
+
+.progress { 
+  background-color: var(--bg-play-bar);
+  cursor: pointer;
+  position: relative;
+}
+
+.progress::before {
+  content: '';
+  background-color: var(--color-2);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress,
+.progress::before {
+  height: 4px;
+  border-radius: 4px;
+}
+
+/* hover .progress (avanzamento) general */
+
+.progress:hover::before {
+  background-color: var(--color-3);
+}
+
+.progress:hover::after {
+  content:'';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-2);
+  position: absolute;
+  top: -2px;
+}
+
+/* side footer left */
+
+.side-footer.left img {
+  width: 25%;
+  aspect-ratio: 1 / 1;  /* si deve rimpicciolire quando scatta la media query senza deformarsi*/
+  margin: 0 10px;
+}
+
+.side-footer.left i {
+  margin: 0 7px;
+}
+
+.side-footer.left span,
+.side-footer.left i {
+  color: var(--color-1);
+} 
+
+/* hover side footer left */
+
+.side-footer.left span:hover {
+  text-decoration: underline;
+}
+
+.side-footer.left span:hover,
+.side-footer.left i:hover {
+  color: var(--color-2);
+} 
+
+/* play-bar */
 
 .play-bar {
   width: 40%;
-  /* debug */
-  background-color: rgba(234, 71, 26, 0.2);
-  height: 30px;
 }
+
+/* play-bar icon */
+
+.play-bar .icon {
+  font-size: 1rem; 
+}
+
+.play-bar .icon i {
+  margin: 0 10px;
+}
+
+.play-bar .icon i:nth-child(3) {
+  font-size: 1.8rem;
+}
+
+/* hover play-bar icon */
+
+.play-bar .icon i:nth-child(3):hover {
+  transform: scale(1.1);
+}
+
+/* play-bar  bar  */
+
+.play-bar .bar {
+  padding: 0 20px;
+}
+
+.play-bar .progress {
+  margin: 0 4%;
+  width: 80%;  
+}
+
+.play-bar .progress::before {
+  width: 20%;
+}
+
+/* hover play-bar bar */
+
+.play-bar .progress:hover::after {
+  left: calc(20% - 8px); 
+}
+
+/* side footer right */
+
+.side-footer.right {
+  padding: 0 10px;
+}
+
+.side-footer.right .progress {
+  width: 50%;  
+}
+
+.side-footer .progress::before {
+  width: 25%;
+}
+
+/* hover side footer right */
+
+.side-footer.right .progress:hover::after {
+  left: calc(25% - 8px);
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

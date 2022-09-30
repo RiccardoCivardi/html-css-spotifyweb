@@ -15,6 +15,8 @@
   --bg-header: rgba(0, 0, 0, 0.3);
   --bg-aside: #000000;
   --bg-main: #141922;
+  --bg-footer: #282828;
+  --bg-play-bar: #5A5A5A;
   --color-1: #A3A3A3;
   --color-2: #ffffff;
   --color-3: #AAF545;
@@ -39,7 +41,8 @@ body {
 
 h2,
 h3,
-h4 {
+h4,
+footer {
   color: var(--color-2);
 }
 
@@ -96,6 +99,7 @@ ul {
 
 .main-container {
   height: var(--height-main-container);
+  overflow: hidden;
 } 
 
 .container {

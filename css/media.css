@@ -29,8 +29,13 @@
 
   /**** FOOTER ****/
 
-  .side-footer {
+  .footer-30 {
     width: 30%; 
+  }
+
+  .footer-flex-column {
+    flex-direction: column;
+    justify-content: space-around;
   }
 
 }
@@ -38,13 +43,13 @@
 
 @media screen and (max-width: 599px) {
   
-  /**** HEADER ****/
+  /**** HEADER + MAIN ****/
 
-  header {
+  .width-small {
     width: var(--width-mb);
   }
 
-  /**** ASIDE ****/
+  /**** ASIDE ****/  
 
   aside {
     width: 60px;
@@ -92,9 +97,4 @@
     border-bottom: none;
   }
 
-  /**** MAIN ****/
-
-  main {
-    width: var(--width-mb);
-  }
 }
