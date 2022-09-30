@@ -115,8 +115,8 @@ ul {
   cursor: pointer;
 }
 
-/* active */
+/* active (in after sia in aside che ne main) */
 
-.active {
+.active::after {
   background-color: var(--color-3);
 }

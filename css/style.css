@@ -2,6 +2,8 @@
 
 /**** HEADER ****/
 
+/* header general */
+
 header {
   width: var(--width-dt);
   height: var(--height-header);
@@ -10,6 +12,8 @@ header {
   right:0;
   background-color: var(--bg-header);
 }
+
+/* header btn + hover */
 
 .btn {
   display: inline-block;
@@ -26,6 +30,7 @@ header {
 .btn:hover {
   transform: scale(1.1);
 }
+
 
 /* ----------------------------------- */
 
@@ -163,6 +168,7 @@ aside li:hover .icon {
   color: var(--color-2);
 } 
 
+
 /* ----------------------------------- */
 
 /**** MAIN ****/
@@ -185,11 +191,14 @@ main {
   margin: 20px 10px 30px; 
 }
 
-.menu-active {
+.menu li::after {
+  content: '';
   width: 30px;
   height: 2px;
   margin-top:4px
 }
+
+/* hover Menu */
 
 .menu li:hover {
   color: var(--color-2);
@@ -204,6 +213,13 @@ section h2 {
 section h2 + p {
   padding: var(--padding-card);
   margin: 8px 0 25px;
+}
+
+.card img {
+  /* le istruzioni che seguono servono solo nel caso di immagini non quadrate */
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .card h3 {
@@ -231,13 +247,16 @@ section .row {
   position: relative;
 }
 
-/* hover album image (play button e opacità */
+/* hover album image (play button e opacity) */
 
 .image {
   position: relative;
 }
 
-.image i {
+.image::after {
+  content: '\f144';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400; /* essendo bold il body devo toglierlo per far funzionare il font awesome */
   font-size: 3.5rem;
   color: var(--color-2);
   position: absolute;
@@ -247,7 +266,7 @@ section .row {
   display: none;
 }
 
-.card:hover i {
+.card:hover .image::after {
   display: block;
 }
 

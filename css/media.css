@@ -51,8 +51,8 @@
 
   /**** ASIDE ****/  
 
-  aside {
-    width: 60px;
+  .aside-mb {
+    width: var(--width-aside-mb);
   }
 
   .logo img:first-child {
