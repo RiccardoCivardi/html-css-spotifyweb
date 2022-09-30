@@ -55,43 +55,31 @@
     width: var(--width-aside-mb);
   }
 
-  .logo img:first-child {
-    display: none;
-  }
-  
-  .logo img:last-child {
-    display:block;
-  }
-
-  .aside-menu ul:first-child li {
-    padding: 5px 0;
-  }
-
-  .aside-menu .aside-active {
+  .d-none-mb {
     display: none;
   }
 
-  .aside-menu svg {
+  .d-block-mb {
     display: block;
   }
 
-  .aside-menu ul:first-child span {
-    display:none;
-  }
-
-  #aside-playlist {
-    display:none;
-  }
-
-  .column {
+  .aside-column {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .aside-bottom div span {
-    display: none;
-  } 
+  .aside-menu ul:first-child li::before {
+    display: none;  /*scomapre la barretta verde dell'active */
+  }
+
+  .aside-menu ul:first-child li {
+    padding: 5px 0;
+  }
+  
+  .aside-menu svg {
+    margin-left: 0;
+  }  
 
   .aside-bottom .install {
     border-bottom: none;

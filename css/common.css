@@ -1,7 +1,6 @@
 /***** GENERAL STYLES *****/
 /**** Desktop first *****/
 
-
 :root {
   --width-aside-dt: 230px;
   --width-aside-mb: 60px;
@@ -115,8 +114,15 @@ ul {
   cursor: pointer;
 }
 
-/* active (in after sia in aside che ne main) */
+/* display none in desktop */
 
-.active::after {
+.d-none-dt {
+  display: none;
+}
+
+/* .active after per main, before per aside */
+
+.active::after,
+.active::before {
   background-color: var(--color-3);
 }

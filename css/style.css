@@ -54,7 +54,7 @@ aside li,
 
 .aside-top {
   height: var(--height-aside-top);
-  min-height: 280px;
+  min-height: 295px;
   overflow: hidden;
 }
 
@@ -65,17 +65,17 @@ aside li,
 
 .logo img:last-child {
   width: 30px;
-  display: none;
-  margin: 5px 15px 15px;
-}
-
-.aside-active {
-  width: 3px;
-  height: 30px;
+  margin: 5px auto 15px;
 }
 
 .aside-menu ul:first-child li {
   padding: 5px 0px;
+}
+
+.aside-menu ul:first-child li::before {
+  content: '';
+  width: 3px;
+  height: 30px;
 }
 
 .aside-menu svg {
@@ -204,7 +204,7 @@ main {
   color: var(--color-2);
 }
 
-/* Section general (recent-tips-popular) */
+/* Section general (recents-tips-populars) */
 
 section h2 {
   padding: var(--padding-card);
@@ -232,17 +232,17 @@ section .row {
 
 /* Recent section */
 
-#recent h2 {
+#recents h2 {
   margin-bottom: 25px;
 }
 
-#recent .row {
+#recents .row {
   margin-bottom: 40px;
 }
 
 /* Popular section */
 
-#popular img {
+#populars img {
   border-radius: 50%;
   position: relative;
 }
